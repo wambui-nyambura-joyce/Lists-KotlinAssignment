@@ -46,12 +46,13 @@ fun main() {
 //at even indices i.e index 2,4,6 etc
 fun stringsAtEvenIndices(strings: List<String>): List<String> {
     return strings.filterIndexed { index, _ -> index % 2 == 0 }
+
 }
 //Given a list of people’s heights in metres. Write a function that returns
 //the average height and the total height
 fun heightStats(heights: List<Double>): Pair<Double, Double> {
     val totalHeight = heights.sum()
-    val averageHeight = totalHeight / heights.size
+    val averageHeight = heights.average()
     return Pair(averageHeight, totalHeight)
 }
 //Given a list of Person objects, each with the attributes, name, age,
